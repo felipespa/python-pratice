@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from api.routers import users, books
+from api.routers import books, todos
+
 
 app = FastAPI()
 
-# app.include_router(users.router)
 app.include_router(books.router)
+app.include_router(todos.router)
 
 
 @app.get("/")
