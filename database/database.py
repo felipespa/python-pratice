@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 # "sqlite:///./todosapp.db"
 # "mysql+pymysql://root:test1234!@127.0.0.1:3306/TodoApplicationDatabase"
