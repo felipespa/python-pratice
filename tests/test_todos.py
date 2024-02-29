@@ -26,11 +26,11 @@ Base.metadata.create_all(bind=engine)
 
 
 def override_get_db():
-    db = TestingSessionLocal
+    db = TestingSessionLocal()
     try:
         yield db
     finally:
-        db.close_all
+        db.close()
 
 
 def override_get_current_user():
